@@ -4,21 +4,19 @@ const Father = styled.div`
   display: flex;
 `;
 
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
+const Input = styled.input.attrs({required: true, minLength: 10})`
+  background-color: tomato;
 `;
 
-const Circle =styled(Box)`
-  border-radius: 50px;
-`;
 
 const App = () => {
   return (
-    <Father>
-      <Box bgColor="teal" />
-      <Circle bgColor="tomato" />
+    <Father as="header">
+      <Input></Input>
+      <Input></Input>
+      <Input></Input>
+      <Input></Input>
+      <Input></Input>
     </Father>
   );
 }
