@@ -3,7 +3,7 @@ import Circle from "./Circle";
 const App = () => {
   return (
     <>
-        <Circle bgColor="teal" />
+        <Circle text="i'm here" bgColor="teal" borderColor={"yellow"} />
         <Circle bgColor="toamto" />
     </>
   );
