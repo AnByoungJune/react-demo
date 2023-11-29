@@ -46,6 +46,7 @@
   },
   "homepage": "https://anbyoungjune.github.io/react-demo",
   "devDependencies": {
+    "@types/react-query": "^1.2.9",
     "@types/styled-components": "^5.1.32"
   }
 }
