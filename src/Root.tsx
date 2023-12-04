@@ -1,14 +1,8 @@
-import {Outlet} from "react-router-dom";
-import Header from "./components/Header";
+import {RouterProvider} from "react-router-dom";
+import router from "./router";
 
 const Root = () => {
-
-  return (
-      <div>
-        <Header />
-        <Outlet />
-      </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default Root;
