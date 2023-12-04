@@ -6,8 +6,12 @@ import Root from "./Root";
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Coins />,
+    element: <Root />,
     children: [
+      {
+        path: '/',
+        element: <Coins />
+      },
       {
         path: '/:coinId',
         element: <Coin />

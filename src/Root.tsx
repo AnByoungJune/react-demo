@@ -1,8 +1,7 @@
-import {RouterProvider} from "react-router-dom";
-import router from "./router";
+import {Outlet} from "react-router-dom";
 
 const Root = () => {
-  return <RouterProvider router={router} />;
+  return <Outlet />;
 }
 
 export default Root;
