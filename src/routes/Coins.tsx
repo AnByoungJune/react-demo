@@ -2,6 +2,8 @@
 import {Link, Outlet} from "react-router-dom";
 import styled from "styled-components";
 import {useEffect, useState} from "react";
+import {useQuery} from 'react-query';
+import {fetchCoins} from "../api";
 
 const Container = styled.div`
   padding: 0 20px;
@@ -53,7 +55,7 @@ const CoinWrapper = styled.div`
 
 `;
 
-interface CoinInterface {
+interface ICoin {
   id: string,
   name: string,
   symbol: string,
@@ -69,7 +71,7 @@ const Loader = styled.span`
 `
 
 const Coins = () => {
-
+/*
   const[coins, setCoins] = useState<CoinInterface[]>([]);
   const[loading, setLoading] = useState(true);
   useEffect(() => {
@@ -80,18 +82,19 @@ const Coins = () => {
       setLoading(false);
     })()
   }, []);
+*/
+  const {isLoading, data} = useQuery<ICoin[]>("allCoins", fetchCoins);
 
-  console.log(coins);
   return (
     <Container>
       <Header>
         <Title>코인</Title>
       </Header>
-      {loading ? (
+      {isLoading ? (
         <Loader>Loading...</Loader>
       ) : (
         <CoinsList>
-          {coins.map((coin) => (
+          {data?.slice(0, 100).map((coin) => (
             <Coin key={coin.id}>
               <Link to={`/${coin.id}`} state={coin}>
                   <Img src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}/>

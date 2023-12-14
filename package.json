@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.0",
-    "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
     "gh-pages": "^6.1.0",
     "react": "^18.2.0",
@@ -48,6 +47,7 @@
   },
   "homepage": "https://anbyoungjune.github.io/react-demo",
   "devDependencies": {
+    "@types/react": "^18.2.45",
     "@types/react-query": "^1.2.9",
     "@types/styled-components": "^5.1.32"
   }
