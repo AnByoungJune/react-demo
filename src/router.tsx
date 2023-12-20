@@ -7,11 +7,11 @@ import Chart from "./routes/Chart";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: `/`,
     element: <Root />,
     children: [
       {
-        path: '/',
+        path: `/`,
         element: <Coins />
       },
       {
@@ -30,6 +30,6 @@ const router = createBrowserRouter([
       }
     ]
   }
-])
+], {basename:  process.env.PUBLIC_URL})
 
 export default router;

@@ -1,6 +1,7 @@
 import {RouterProvider} from "react-router-dom";
 import {createGlobalStyle} from "styled-components";
 import router from "./router";
+import {ReactQueryDevtools} from "react-query/devtools"
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -73,6 +74,7 @@ const App = () => {
     <div>
       <RouterProvider router={router} />
       <GlobalStyle />
+      <ReactQueryDevtools initialIsOpen={true}/>
     </div>
     )
 }
