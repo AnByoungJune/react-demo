@@ -5,7 +5,7 @@ import {ThemeProvider} from "styled-components";
 import {theme} from "./theme";
 import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 const queryClient = new QueryClient();
 
