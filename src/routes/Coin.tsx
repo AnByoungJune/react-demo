@@ -179,6 +179,7 @@ const Coin = () => {
   return (
     <Container>
       <Header>
+        <Link to={`/`} >Back</Link>
         <Title>{state?.name ? state.name: loading ? "Loading..." : infoData?.name}</Title>
       </Header>
       {loading ? (
@@ -216,11 +217,11 @@ const Coin = () => {
               <Link to={`/${coinId}/chart`} >Chart</Link>
             </Tab>
             <Tab $isActive={priceMatch !== null}>
-              <Link to={`/${coinId}/price`}>Price</Link>
+              <Link to={`/${coinId}/price`} >Price</Link>
             </Tab>
           </Tabs>
 
-          <Outlet context={{coinId: coinId}} />
+          <Outlet context={{coinId: coinId, priceData: tickersData}} />
         </>
       )}
     </Container>
